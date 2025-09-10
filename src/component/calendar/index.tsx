@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 import {
   BRIDE_FIRSTNAME,
   GROOM_FIRSTNAME,
-  HOLIDAYS,
+  //HOLIDAYS, 
   WEDDING_DATE,
 } from "../../const"
 import { LazyDiv } from "../lazyDiv"
@@ -41,30 +41,30 @@ export const Calendar = () => {
 
   return (
     <LazyDiv className="card calendar">
-      <h2 className="english">The Wedding Day</h2>
+      <h2 className="sub_title">- 결혼식 -</h2>
       <div className="break" />
       {WEDDING_DATE.format("YYYY년 MMMM D일 dddd A h시")}
       <div className="calendar-wrapper">
         <div className="head holiday">
-          <span>Su</span>
+          <span>일</span>
         </div>
         <div className="head">
-          <span>Mo</span>
+          <span>월</span>
         </div>
         <div className="head">
-          <span>Tu</span>
+          <span>화</span>
         </div>
         <div className="head">
-          <span>We</span>
+          <span>수</span>
         </div>
         <div className="head">
-          <span>Th</span>
+          <span>목</span>
         </div>
         <div className="head">
-          <span>Fr</span>
+          <span>금</span>
         </div>
         <div className="head">
-          <span>Sa</span>
+          <span>토</span>
         </div>
         {Array.from({ length: firstDayOfWeek }).map((_, i) => (
           <div key={i} />
@@ -76,7 +76,8 @@ export const Calendar = () => {
 
           const isSunday = (i + firstDayOfWeek) % 7 === 0
 
-          if (isSunday || HOLIDAYS.includes(date)) {
+          //if (isSunday || HOLIDAYS.includes(date)) {
+          if (isSunday) {
             classes.push("holiday")
           }
 
@@ -99,13 +100,13 @@ export const Calendar = () => {
       </div>
       <div className="countdown-wrapper">
         <div className="countdown">
-          <div className="unit">DAY</div>
+          <div className="unit">일</div>
           <div />
-          <div className="unit">HOUR</div>
+          <div className="unit">시간</div>
           <div />
-          <div className="unit">MIN</div>
+          <div className="unit">분</div>
           <div />
-          <div className="unit">SEC</div>
+          <div className="unit">초</div>
           <div className="count">{diffs.days}</div>
           <span>:</span>
           <div className="count">{diffs.hours}</div>

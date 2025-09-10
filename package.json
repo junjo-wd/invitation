@@ -2,10 +2,10 @@
   "name": "wedding-invitation",
   "version": "0.1.0",
   "description": "A wedding invitation web page template",
-  "author": "Ju Ho Nam <jhnamnam@gmail.com> (https://juhonamnam.github.io/)",
+  "author": "JO HYE JIN (https://junjo-wd.github.io/)",
   "license": "MIT",
   "private": true,
-  "homepage": "https://juhonamnam.github.io/wedding-invitation",
+  "homepage": "https://junjo-wd.github.io/invitation/",
   "dependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",

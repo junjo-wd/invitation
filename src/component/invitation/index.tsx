@@ -21,20 +21,21 @@ export const Invitation = () => {
   const { openModal, closeModal } = useModal()
   return (
     <LazyDiv className="card invitation">
-      <h2 className="english">Invitation</h2>
+      <h2 className="sub_title">- 초대장 -</h2>
 
       <div className="break" />
 
-      <div className="content">싱그러운 여름 향기 가득한 날</div>
-      <div className="content">소중한 분들을 모시고</div>
-      <div className="content">사랑의 약속을 하려고 합니다.</div>
+      <div className="contHOLIDAYSent">벚꽃이 흩날리는 4월의 어느날,</div>
+      <div className="contHOLIDAYSent">저희 결혼합니다.</div> 
+      <div className="content"></div>
+      <div className="content">사랑으로 쌓아온 시간을</div>
+      <div className="content">이제 하나의 길로 이어갑니다.</div> 
       <div className="break" />
-      <div className="content">햇살이 뜨거울 땐 가려주고,</div>
-      <div className="content">비가 오면 우산이 되어주는</div>
-      <div className="content">부부가 되겠습니다.</div>
+      <div className="content">귀한 걸음 하시어 따뜻한 마음으로</div>
+      <div className="content">함께해 주시면 감사하겠습니다.</div>
       <div className="break" />
-      <div className="content">기쁜날 함께 하시어</div>
-      <div className="content">저희의 앞날을 축복해 주세요.</div>
+      <div className="content">늘 곁에서 아껴주신 고마운 분들을</div>
+      <div className="content">기쁜 마음으로 초대합니다.</div>
 
       <div className="break" />
 

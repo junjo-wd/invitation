@@ -9,7 +9,9 @@ import {
   useState,
 } from "react"
 
-const NAVER_MAP_URL = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.REACT_APP_NAVER_MAP_CLIENT_ID}`
+// 자꾸 예전 인증키 가지고 와서(캐쉬삭제도 안돼ㅠㅠ 일단 하드코딩 client Id (maps API key) tu4l8dvg87
+//const NAVER_MAP_URL = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.REACT_APP_NAVER_MAP_CLIENT_ID}`
+const NAVER_MAP_URL = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=tu4l8dvg87`
 const KAKAO_SDK_URL = `${process.env.PUBLIC_URL}/kakao.min.js`
 
 type ModalInfo = {

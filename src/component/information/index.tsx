@@ -2,19 +2,19 @@ import { BRIDE_INFO, GROOM_INFO } from "../../const"
 import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
 import { useModal } from "../store"
-import { AttendanceInfo } from "./attendance"
+// import { AttendanceInfo } from "./attendance"
 
 export const Information = () => {
   const { openModal, closeModal } = useModal()
   return (
     <LazyDiv className="card information">
-      <h2 className="english">Information</h2>
+      <h2 className="sub_title">- 안내 -</h2>
       <div className="info-card">
         <div className="label">식사 안내</div>
         <div className="content">
-          식사시간: 12시 30분 ~ 14시 30분
+          식사시간: 10시 30분 ~ 13시
           <br />
-          장소: 지하 1층 연회장
+          장소: 2층 연회장
         </div>
       </div>
 
@@ -136,7 +136,8 @@ export const Information = () => {
           신부측 계좌번호 보기
         </Button>
       </div>
-      <AttendanceInfo />
+      {/* 모달 팝업 참석 여부 확인 안띄움  */}
+      {/* <AttendanceInfo />  */}
     </LazyDiv>
   )
 }

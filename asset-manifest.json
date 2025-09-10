@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/invitation/static/css/main.f0342ad4.css",
+    "main.js": "/invitation/static/js/main.674ad8b6.js",
+    "static/js/453.40063271.chunk.js": "/invitation/static/js/453.40063271.chunk.js",
+    "static/media/image3.png": "/invitation/static/media/image3.f779b49c39e516061bc3.png",
+    "static/media/image10.png": "/invitation/static/media/image10.56cd6176064b3cf7ec86.png",
+    "static/media/image2.png": "/invitation/static/media/image2.58784522e4c4c5713509.png",
+    "static/media/image4.png": "/invitation/static/media/image4.68d7019f7315e52c7b44.png",
+    "static/media/image7.png": "/invitation/static/media/image7.c85f779d92a697958f37.png",
+    "static/media/image9.png": "/invitation/static/media/image9.071c29c1932b0755a722.png",
+    "static/media/image5.png": "/invitation/static/media/image5.72fb13b8cfa7f27904c7.png",
+    "static/media/image6.png": "/invitation/static/media/image6.c14c1edb9566aa5003df.png",
+    "static/media/image13.png": "/invitation/static/media/image13.387f3a7d477c3cdf000e.png",
+    "static/media/image1.png": "/invitation/static/media/image1.1a68102b20b10645d703.png",
+    "static/media/cover.png": "/invitation/static/media/cover.37d50c7e7ba76e58ecb9.png",
+    "static/media/image8.png": "/invitation/static/media/image8.87ed75000eee2a598395.png",
+    "static/media/image14.png": "/invitation/static/media/image14.49a3b9656c48a8183495.png",
+    "static/media/image12.png": "/invitation/static/media/image12.81b9781b1c184dd208b2.png",
+    "static/media/image11.png": "/invitation/static/media/image11.d31c63c0598736791a7e.png",
+    "index.html": "/invitation/index.html",
+    "static/media/unlock-icon.svg": "/invitation/static/media/unlock-icon.88bf18f192c9d6bee37353e1059dd6dc.svg",
+    "static/media/lock-icon.svg": "/invitation/static/media/lock-icon.d97186ec2081e836e536f0b725731dcf.svg",
+    "static/media/angle-left-sm.svg": "/invitation/static/media/angle-left-sm.658033af14cebbe2d43a80f11c7358ee.svg",
+    "static/media/car-icon.svg": "/invitation/static/media/car-icon.77d557bb93a6c2d3d6a1ae30764b40c3.svg",
+    "static/media/phone-flip-icon.svg": "/invitation/static/media/phone-flip-icon.496ea6d58b4e92a0e352f6f690f60fb7.svg",
+    "static/media/bus-icon.svg": "/invitation/static/media/bus-icon.5a16a0674d51da7b3aac52196f740cac.svg",
+    "static/media/envelope-icon.svg": "/invitation/static/media/envelope-icon.be80a338483de436162aab691e2518d1.svg",
+    "main.f0342ad4.css.map": "/invitation/static/css/main.f0342ad4.css.map",
+    "main.674ad8b6.js.map": "/invitation/static/js/main.674ad8b6.js.map",
+    "453.40063271.chunk.js.map": "/invitation/static/js/453.40063271.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0342ad4.css",
+    "static/js/main.674ad8b6.js"
+  ]
+}

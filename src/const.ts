@@ -14,6 +14,8 @@ import image9 from "./image/image9.png"
 import image10 from "./image/image10.png"
 import image11 from "./image/image11.png"
 import image12 from "./image/image12.png"
+import image13 from "./image/image13.png"
+import image14 from "./image/image14.png"
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -21,57 +23,58 @@ dayjs.locale("ko")
 
 export { dayjs }
 
-export const WEDDING_DATE = dayjs.tz("2024-08-24 13:00", "Asia/Seoul")
-export const HOLIDAYS = [15]
+export const WEDDING_DATE = dayjs.tz("2026-04-12 11:00", "Asia/Seoul")
+export const HOLIDAYS = [15] //holiday 4월은 없음
 
-export const LOCATION = "서울대학교 연구공원 웨딩홀"
-export const LOCATION_ADDRESS = "서울시 관악구 관악로 1, 연구공원 본관 1층"
+export const LOCATION = "메리빌리아 더 프레스티지"
+export const HALL_NAME = "2층 컨벤션홀"
+export const LOCATION_ADDRESS  = "경기도 수원시 권선구 세화로 116(서둔동 389)"
 
 export const SHARE_ADDRESS = LOCATION
 export const SHARE_ADDRESS_TITLE = LOCATION
 
-export const WEDDING_HALL_POSITION = [126.9594982, 37.4657134]
+export const WEDDING_HALL_POSITION = [126.996439, 37.262723] //메리빌리아 더 프레스티지 위도와 경도 구글로 찾아서 순서 반대로 입력하면 됨
 
-export const NMAP_PLACE_ID = 13321741
-export const KMAP_PLACE_ID = 8634826
+export const NMAP_PLACE_ID = 1856237237
+export const KMAP_PLACE_ID = 871976307
 
-export const BRIDE_FULLNAME = "정지원"
-export const BRIDE_FIRSTNAME = "지원"
-export const BRIDE_TITLE = "장녀"
-export const BRIDE_FATHER = "정상원"
-export const BRIDE_MOTHER = "박윤정"
+export const BRIDE_FULLNAME = "조혜진"
+export const BRIDE_FIRSTNAME = "혜진"
+export const BRIDE_TITLE = "딸"
+export const BRIDE_FATHER = "조병훈"
+export const BRIDE_MOTHER = "윤난희"
 export const BRIDE_INFO = [
   {
     relation: "신부",
     name: BRIDE_FULLNAME,
-    phone: "010-0000-0000",
-    account: "우리은행 0000000000000",
+    phone: "010-4983-0724",
+    account: "우리은행 1002935977770",
   },
   {
     relation: "신부 아버지",
     name: BRIDE_FATHER,
-    phone: "010-0000-0000",
-    account: "하나은행 00000000000",
+    phone: "010-5271-8813",
+    account: "우리은행 063309895302402",
   },
   {
     relation: "신부 어머니",
     name: BRIDE_MOTHER,
-    phone: "010-0000-0000",
-    account: "하나은행 00000000000000",
+    phone: "010-9014-8813",
+    account: "우리은행 26907009546",
   },
 ]
 
-export const GROOM_FULLNAME = "남주호"
-export const GROOM_FIRSTNAME = "주호"
-export const GROOM_TITLE = "차남"
-export const GROOM_FATHER = "남현태"
-export const GROOM_MOTHER = "김현영"
+export const GROOM_FULLNAME = "전희원"
+export const GROOM_FIRSTNAME = "희원"
+export const GROOM_TITLE = "아들"
+export const GROOM_FATHER = "전영기"
+export const GROOM_MOTHER = "오영이"
 export const GROOM_INFO = [
   {
     relation: "신랑",
     name: GROOM_FULLNAME,
-    phone: "010-0000-0000",
-    account: "하나은행 00000000000000",
+    phone: "010-9029-7431",
+    account: "신한은행 110348729220",
   },
   {
     relation: "신랑 아버지",
@@ -100,4 +103,7 @@ export const GALLERY_IMAGES = [
   image10,
   image11,
   image12,
+  image13,
+  image14,
+  
 ]

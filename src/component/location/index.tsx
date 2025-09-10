@@ -8,10 +8,10 @@ export const Location = () => {
   return (
     <>
       <LazyDiv className="card location">
-        <h2 className="english">Location</h2>
+        <h2 className="sub_title">- 오시는 길 -</h2>
         <div className="addr">
           {LOCATION}
-          <div className="detail">{LOCATION_ADDRESS}</div>
+          <div className="detail">{LOCATION_ADDRESS}</div>          
         </div>
         <Map />
       </LazyDiv>
@@ -25,28 +25,17 @@ export const Location = () => {
           <div className="content">
             * 지하철 이용시
             <br />
-            지하철 2호선 <b>낙성대역 4번출구</b> 나와서
+            지하철 1호선, 수인분당선, KTX
             <br />
-            → 첫번째 골목 끼고 좌회전
-            <br />→ 마을버스 <b>관악 02번</b> 승차
-            <br />→ <b>서울대후문·연구공원 정류장</b> 하차
+            <b> 수원역 2층 3번출구</b> 도보 8분거리                       
             <br />
-            → 길 건너 간판 참고해 도보로 100m 이동
-            <br />
-            검은색 피라미드 유리 건물입니다.
+            (롯데 타임빌라스 수원 맞은편)
           </div>
           <div />
           <div className="content">
             * 버스 이용 시
             <br />
-            - 간선(파랑): 461, 641
-            <br />
-            - 지선(초록): 5413, 5524, 5528
-            <br />
-            반드시 <b>낙성대입구</b> 하차
-            <br />→ 마을버스 <b>관악 02번</b> 이용
-            <br />
-            이하 위와 동일합니다.
+            - 수원역 환승센터(1승강장), 평동동남아파트 하차            
           </div>
         </div>
         <div className="location-info">
@@ -58,19 +47,14 @@ export const Location = () => {
           <div className="content">
             네이버 지도, 카카오 네비, 티맵 등 이용
             <br />
-            <b>서울대학교 연구공원 웨딩홀</b> 검색
+            <b>메리빌리아 더 프레스티지</b> 검색
             <br />
-            - 주차 요금은 무료입니다.
+            - 웨딩홀 내부 주차 가능 (2시간 무료 주차)
             <br />
-            (주차장 이용 시 웨딩홀과 바로 연결)
+            ※ 만차시 외부주차장 이용 가능 
+            <br />(주차요원 안내 예정)            
           </div>
-          <div />
-          <div className="content">
-            <b>
-              ※ 서울대학교 정, 후문을 통과할 경우 통행료가 발생하므로
-              유의바랍니다. 낙성대 방향으로 이용해주세요.
-            </b>
-          </div>
+          <div />          
         </div>
       </LazyDiv>
     </>

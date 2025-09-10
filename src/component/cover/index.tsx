@@ -2,20 +2,21 @@ import {
   BRIDE_FULLNAME,
   GROOM_FULLNAME,
   LOCATION,
+  HALL_NAME,
   WEDDING_DATE,
 } from "../../const"
 import coverImage from "../../image/cover.png"
 import { LazyDiv } from "../lazyDiv"
 
-const DAY_OF_WEEK = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-]
+// const DAY_OF_WEEK = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ]
 
 export const Cover = () => {
   return (
@@ -25,15 +26,15 @@ export const Cover = () => {
         <div className="divider" />
         {WEDDING_DATE.format("MM")}
         <div className="divider" />
-        {WEDDING_DATE.format("DD")}
+        {WEDDING_DATE.format("DD")}        
       </div>
       <div className="wedding-day-of-week">
-        {DAY_OF_WEEK[WEDDING_DATE.day()]}
+        {/* {DAY_OF_WEEK[WEDDING_DATE.day()]} */}
       </div>
       <div className="image-wrapper">
         <img src={coverImage} alt="sample" />
       </div>
-      <div className="subtitle">Save the date for the wedding of</div>
+      <div className="subtitle">♥</div>
       <div className="names">
         {GROOM_FULLNAME}
         <div className="divider" />
@@ -43,6 +44,7 @@ export const Cover = () => {
         {WEDDING_DATE.format("YYYY년 MMMM D일 dddd A h시")}
       </div>
       <div className="info">{LOCATION}</div>
+      <div className="info">{HALL_NAME}</div>
     </LazyDiv>
   )
 }
