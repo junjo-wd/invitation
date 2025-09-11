@@ -40,7 +40,7 @@
   font-style: normal;
 }
 
-/* 눈누에서 URL로 불러온 폰트 */
+/* 눈누 에서 URL로 불러온 폰트 */
 @font-face {
   font-family: 'KyoboHandwriting2019';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
