@@ -1,51 +1,49 @@
 @font-face {
   font-family: "MapoGoldenPier";
-  src: url("./MapoGoldenPierA.woff") format("woff");
+  src: url("/MapoGoldenPierA.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Allura";
-  src: url("./AlluraRegular.woff") format("woff");
+  src: url("/AlluraRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GowunBatang-Regular";
-  src: url("./GowunBatang-Regular.woff") format("woff");
+  src: url("/GowunBatang-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SeoulNamsanM";
-  src: url("./SeoulNamsanM.woff") format("woff");
+  src: url("/SeoulNamsanM.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SeoulNamsanB";
-  src: url("./SeoulNamsanB.woff") format("woff");
+  src: url("/SeoulNamsanB.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "BMJUA";
-  src: url(".BMJUA/woff") format("woff");
+  src: url("/BMJUA.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
-
-
-/* 눈누에서 url로 불러온것 */
+/* 눈누에서 url로 불러온 것 */
 @font-face {
-    font-family: 'KyoboHandwriting2019';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
+  font-family: 'KyoboHandwriting2019';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
 }
