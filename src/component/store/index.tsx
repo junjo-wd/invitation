@@ -184,16 +184,16 @@ export const useNaver = () => {
 
 export const useKakao = () => {
   const { kakao, setKakao } = useContext(GlobalContext)
+
   useEffect(() => {
-    if (!process.env.REACT_APP_KAKAO_SDK_JS_KEY) {
-      return
-    }
+  
+    const KAKAO_SDK_JS_KEY = "e1250c305097c95c1df78f35c4d8a263"  // 하드코딩 카카오 
 
     if (!document.querySelector(`script[src="${KAKAO_SDK_URL}"]`)) {
       const script = document.createElement("script")
       script.addEventListener("load", () => {
         if (!(window as any).Kakao.isInitialized()) {
-          ;(window as any).Kakao.init(process.env.REACT_APP_KAKAO_SDK_JS_KEY)
+          ;(window as any).Kakao.init(KAKAO_SDK_JS_KEY)
         }
         setKakao((window as any).Kakao)
       })
