@@ -1,41 +1,41 @@
 @font-face {
   font-family: "MapoGoldenPier";
-  src: url("/fonts/MapoGoldenPierA.woff") format("woff");
+  src: url("/invitation/fonts/MapoGoldenPierA.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Allura";
-  src: url("/fonts/AlluraRegular.woff") format("woff");
+  src: url("/invitation/fonts/AlluraRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GowunBatang-Regular";
-  src: url("/fonts/GowunBatang-Regular.woff") format("woff");
+  src: url("/invitation/fonts/GowunBatang-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SeoulNamsanM";
-  src: url("/fonts/SeoulNamsanM.woff") format("woff");
+  src: url("/invitation/fonts/SeoulNamsanM.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SeoulNamsanB";
-  src: url("/fonts/SeoulNamsanB.woff") format("woff");
+  src: url("/invitation/fonts/SeoulNamsanB.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "BMJUA";
-  src: url("/fonts/BMJUA.woff") format("woff");
+  src: url("/invitation/fonts/BMJUA.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
