@@ -46,7 +46,7 @@
 /* BMJUA */
 @font-face {
   font-family: "BMJUA";
-  src: url("%PUBLIC_URL%/fonts/BMJUA.woff?v=1") format("woff");
+  src: url("/invitation/fonts/BMJUA.woff?v=1") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
