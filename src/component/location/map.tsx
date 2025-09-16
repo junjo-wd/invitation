@@ -123,9 +123,7 @@ const NaverMap = () => {
           네이버 지도
         </button>
         <button
-          onClick={() => {
-
-            alert('h'+checkDevice())
+          onClick={() => {      
             switch (checkDevice()) {
               case "ios":
               case "android":
