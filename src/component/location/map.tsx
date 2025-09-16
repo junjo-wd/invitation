@@ -149,6 +149,9 @@ const NaverMap = () => {
         </button>
         <button
           onClick={() => {
+            
+            alert("Detected device: " + checkDevice())
+
             switch (checkDevice()) {
               case "ios":
               case "android":
