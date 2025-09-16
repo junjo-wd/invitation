@@ -1,46 +1,58 @@
+/* MapoGoldenPier */
 @font-face {
   font-family: "MapoGoldenPier";
   src: url("/invitation/fonts/MapoGoldenPierA.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Allura */
 @font-face {
   font-family: "Allura";
   src: url("/invitation/fonts/AlluraRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+/* GowunBatang */
 @font-face {
   font-family: "GowunBatang-Regular";
   src: url("/invitation/fonts/GowunBatang-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+/* SeoulNamsanM */
 @font-face {
   font-family: "SeoulNamsanM";
   src: url("/invitation/fonts/SeoulNamsanM.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+/* SeoulNamsanB */
 @font-face {
   font-family: "SeoulNamsanB";
   src: url("/invitation/fonts/SeoulNamsanB.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
+/* BMJUA */
 @font-face {
   font-family: "BMJUA";
-  src: url("/invitation/fonts/BMJUA.woff") format("woff");
+  src: url("/invitation/fonts/BMJUA.woff?v=1") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-/* 눈누 에서 URL로 불러온 폰트 */
+/* 외부 폰트 (눈누) */
 @font-face {
   font-family: 'KyoboHandwriting2019';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
