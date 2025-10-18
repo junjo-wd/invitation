@@ -12,18 +12,24 @@ import {
   WEDDING_HALL_POSITION,
 } from "../../const"
 
-// 하드코딩 NAVER clientId
-const NAVER_CLIENT_ID = "tu4l8dvg87";
+// 자꾸 예전 인증키 가지고 와서(캐쉬삭제도 안돼ㅠㅠ 일단 하드코딩 client Id (maps API key) tu4l8dvg87
+// const NAVER_CLIENT_ID = "tu4l8dvg87";
 
 export const Map = () => {
-  return <NaverMap clientId={NAVER_CLIENT_ID} />
+
+  // console.log(process.env.REACT_APP_NAVER_MAP_CLIENT_ID);
+
+
+  
+  return process.env.REACT_APP_NAVER_MAP_CLIENT_ID ? (
+    <NaverMap />
+  ) : (
+    <div>Map is not available</div>
+  )
 }
 
-interface NaverMapProps {
-  clientId: string
-}
 
-const NaverMap = ({ clientId }: NaverMapProps) => {
+const NaverMap = () => {
   const naver = useNaver()
   const kakao = useKakao()
   const ref = useRef<HTMLDivElement>(null)
@@ -33,23 +39,29 @@ const NaverMap = ({ clientId }: NaverMapProps) => {
 
   const checkDevice = () => {
     const userAgent = window.navigator.userAgent
-    if (userAgent.match(/(iPhone|iPod|iPad)/)) return "ios"
-    if (userAgent.match(/(Android)/)) return "android"
-    return "other"
+    if (userAgent.match(/(iPhone|iPod|iPad)/)) {
+      return "ios"
+    } else if (userAgent.match(/(Android)/)) {
+      return "android"
+    } else {
+      return "other"
+    }
   }
 
   useEffect(() => {
-    if (naver && ref.current) {
-      // 여기서 clientId 사용 (실제 API init 등 필요한 경우 적용)
+    if (naver) {
       const map = new naver.maps.Map(ref.current, {
         center: WEDDING_HALL_POSITION,
         zoom: 17,
       })
+
       new naver.maps.Marker({ position: WEDDING_HALL_POSITION, map })
 
-      return () => map.destroy()
+      return () => {
+        map.destroy()
+      }
     }
-  }, [naver, clientId])
+  }, [naver])
 
   return (
     <>
@@ -116,7 +128,7 @@ const NaverMap = ({ clientId }: NaverMapProps) => {
           네이버 지도
         </button>
         <button
-          onClick={() => {
+          onClick={() => {      
             switch (checkDevice()) {
               case "ios":
               case "android":
@@ -142,6 +154,7 @@ const NaverMap = ({ clientId }: NaverMapProps) => {
         </button>
         <button
           onClick={() => {
+          
             switch (checkDevice()) {
               case "ios":
               case "android":
