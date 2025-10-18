@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react"
+import { useKakao, useNaver } from "../../component/store"
 import nmapIcon from "../../image/nmap-icon.png"
 import knaviIcon from "../../image/knavi-icon.png"
 import tmapIcon from "../../image/tmap-icon.png"
@@ -11,13 +12,16 @@ import {
   WEDDING_HALL_POSITION,
 } from "../../const"
 
-const NAVER_CLIENT_ID = "tu4l8dvg87" // 하드코딩
+// 하드코딩 네이버 지도 API 키
+const NAVER_CLIENT_ID = "tu4l8dvg87"
 
 export const Map = () => {
-  return <NaverMap />
+  return <NaverMap clientId={NAVER_CLIENT_ID} />
 }
 
-const NaverMap = () => {
+const NaverMap = ({ clientId }: { clientId: string }) => {
+  const naver = useNaver()
+  const kakao = useKakao()
   const ref = useRef<HTMLDivElement>(null)
   const [locked, setLocked] = useState(true)
   const [showLockMessage, setShowLockMessage] = useState(false)
@@ -26,43 +30,21 @@ const NaverMap = () => {
   const checkDevice = () => {
     const userAgent = window.navigator.userAgent
     if (userAgent.match(/(iPhone|iPod|iPad)/)) return "ios"
-    else if (userAgent.match(/(Android)/)) return "android"
-    else return "other"
+    if (userAgent.match(/(Android)/)) return "android"
+    return "other"
   }
 
   useEffect(() => {
-    if (!ref.current) return
+    if (!naver) return
+    // clientId 하드코딩으로 맵 생성
+    const map = new naver.maps.Map(ref.current, {
+      center: WEDDING_HALL_POSITION,
+      zoom: 17,
+    })
+    new naver.maps.Marker({ position: WEDDING_HALL_POSITION, map })
 
-    // 스크립트 로드
-    const existingScript = document.querySelector(
-      `script[src*="naver.maps.js"]`
-    )
-    if (!existingScript) {
-      const script = document.createElement("script")
-      script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${NAVER_CLIENT_ID}`
-      script.async = true
-      script.onload = () => {
-        const map = new (window as any).naver.maps.Map(ref.current, {
-          center: WEDDING_HALL_POSITION,
-          zoom: 17,
-        })
-        new (window as any).naver.maps.Marker({
-          position: WEDDING_HALL_POSITION,
-          map,
-        })
-      }
-      document.head.appendChild(script)
-    } else {
-      const map = new (window as any).naver.maps.Map(ref.current, {
-        center: WEDDING_HALL_POSITION,
-        zoom: 17,
-      })
-      new (window as any).naver.maps.Marker({
-        position: WEDDING_HALL_POSITION,
-        map,
-      })
-    }
-  }, [])
+    return () => map.destroy()
+  }, [naver, clientId])
 
   return (
     <>
@@ -110,7 +92,6 @@ const NaverMap = () => {
       </div>
 
       <div className="navigation">
-        {/* 네이버 지도 */}
         <button
           onClick={() => {
             switch (checkDevice()) {
@@ -123,7 +104,6 @@ const NaverMap = () => {
                   `https://map.naver.com/p/entry/place/${NMAP_PLACE_ID}`,
                   "_blank"
                 )
-                break
             }
           }}
         >
@@ -131,14 +111,13 @@ const NaverMap = () => {
           네이버 지도
         </button>
 
-        {/* 카카오 내비 */}
         <button
           onClick={() => {
             switch (checkDevice()) {
               case "ios":
               case "android":
-                if ((window as any).kakao)
-                  (window as any).kakao.Navi.start({
+                if (kakao)
+                  kakao.Navi.start({
                     name: LOCATION,
                     x: WEDDING_HALL_POSITION[0],
                     y: WEDDING_HALL_POSITION[1],
@@ -150,7 +129,6 @@ const NaverMap = () => {
                   `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
                   "_blank"
                 )
-                break
             }
           }}
         >
@@ -158,7 +136,6 @@ const NaverMap = () => {
           카카오 내비
         </button>
 
-        {/* T맵 */}
         <button
           onClick={() => {
             switch (checkDevice()) {
@@ -173,7 +150,6 @@ const NaverMap = () => {
                 break
               default:
                 alert("모바일에서 확인하실 수 있습니다.")
-                break
             }
           }}
         >
