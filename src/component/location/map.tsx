@@ -13,7 +13,7 @@ import {
 } from "../../const"
 
 // 자꾸 예전 인증키 가지고 와서(캐쉬삭제도 안돼ㅠㅠ 일단 하드코딩 client Id (maps API key) tu4l8dvg87
-const NAVER_CLIENT_ID = "tu4l8dvg87";
+// const NAVER_CLIENT_ID = "tu4l8dvg87";
 
 export const Map = () => {
   return process.env.REACT_APP_NAVER_MAP_CLIENT_ID ? (
