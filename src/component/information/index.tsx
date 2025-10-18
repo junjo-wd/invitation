@@ -19,7 +19,7 @@ export const Information = () => {
       </div>
 
       <div className="info-card">
-        <div className="label">화한 안내</div>
+        <div className="label">화환 안내</div>
         <div className="content">
           환경보호 동참을 위해 화환은 정중히 사양합니다.
           <br />

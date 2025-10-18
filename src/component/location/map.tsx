@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react"
-import { useKakao, useNaver } from "../../component/store"
 import nmapIcon from "../../image/nmap-icon.png"
 import knaviIcon from "../../image/knavi-icon.png"
 import tmapIcon from "../../image/tmap-icon.png"
@@ -12,26 +11,13 @@ import {
   WEDDING_HALL_POSITION,
 } from "../../const"
 
-// 자꾸 예전 인증키 가지고 와서(캐쉬삭제도 안돼ㅠㅠ 일단 하드코딩 client Id (maps API key) tu4l8dvg87
-// const NAVER_CLIENT_ID = "tu4l8dvg87";
+const NAVER_CLIENT_ID = "tu4l8dvg87" // 하드코딩
 
 export const Map = () => {
-
-  // console.log(process.env.REACT_APP_NAVER_MAP_CLIENT_ID);
-
-
-  
-  return process.env.REACT_APP_NAVER_MAP_CLIENT_ID ? (
-    <NaverMap />
-  ) : (
-    <div>Map is not available</div>
-  )
+  return <NaverMap />
 }
 
-
 const NaverMap = () => {
-  const naver = useNaver()
-  const kakao = useKakao()
   const ref = useRef<HTMLDivElement>(null)
   const [locked, setLocked] = useState(true)
   const [showLockMessage, setShowLockMessage] = useState(false)
@@ -39,29 +25,44 @@ const NaverMap = () => {
 
   const checkDevice = () => {
     const userAgent = window.navigator.userAgent
-    if (userAgent.match(/(iPhone|iPod|iPad)/)) {
-      return "ios"
-    } else if (userAgent.match(/(Android)/)) {
-      return "android"
-    } else {
-      return "other"
-    }
+    if (userAgent.match(/(iPhone|iPod|iPad)/)) return "ios"
+    else if (userAgent.match(/(Android)/)) return "android"
+    else return "other"
   }
 
   useEffect(() => {
-    if (naver) {
-      const map = new naver.maps.Map(ref.current, {
+    if (!ref.current) return
+
+    // 스크립트 로드
+    const existingScript = document.querySelector(
+      `script[src*="naver.maps.js"]`
+    )
+    if (!existingScript) {
+      const script = document.createElement("script")
+      script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${NAVER_CLIENT_ID}`
+      script.async = true
+      script.onload = () => {
+        const map = new (window as any).naver.maps.Map(ref.current, {
+          center: WEDDING_HALL_POSITION,
+          zoom: 17,
+        })
+        new (window as any).naver.maps.Marker({
+          position: WEDDING_HALL_POSITION,
+          map,
+        })
+      }
+      document.head.appendChild(script)
+    } else {
+      const map = new (window as any).naver.maps.Map(ref.current, {
         center: WEDDING_HALL_POSITION,
         zoom: 17,
       })
-
-      new naver.maps.Marker({ position: WEDDING_HALL_POSITION, map })
-
-      return () => {
-        map.destroy()
-      }
+      new (window as any).naver.maps.Marker({
+        position: WEDDING_HALL_POSITION,
+        map,
+      })
     }
-  }, [naver])
+  }, [])
 
   return (
     <>
@@ -74,7 +75,7 @@ const NaverMap = () => {
               clearTimeout(lockMessageTimeout.current)
               lockMessageTimeout.current = setTimeout(
                 () => setShowLockMessage(false),
-                3000,
+                3000
               )
             }}
             onMouseDown={() => {
@@ -82,7 +83,7 @@ const NaverMap = () => {
               clearTimeout(lockMessageTimeout.current)
               lockMessageTimeout.current = setTimeout(
                 () => setShowLockMessage(false),
-                3000,
+                3000
               )
             }}
           >
@@ -107,7 +108,9 @@ const NaverMap = () => {
         </button>
         <div className="map-inner" ref={ref}></div>
       </div>
+
       <div className="navigation">
+        {/* 네이버 지도 */}
         <button
           onClick={() => {
             switch (checkDevice()) {
@@ -118,7 +121,7 @@ const NaverMap = () => {
               default:
                 window.open(
                   `https://map.naver.com/p/entry/place/${NMAP_PLACE_ID}`,
-                  "_blank",
+                  "_blank"
                 )
                 break
             }
@@ -127,13 +130,15 @@ const NaverMap = () => {
           <img src={nmapIcon} alt="naver-map-icon" />
           네이버 지도
         </button>
+
+        {/* 카카오 내비 */}
         <button
-          onClick={() => {      
+          onClick={() => {
             switch (checkDevice()) {
               case "ios":
               case "android":
-                if (kakao)
-                  kakao.Navi.start({
+                if ((window as any).kakao)
+                  (window as any).kakao.Navi.start({
                     name: LOCATION,
                     x: WEDDING_HALL_POSITION[0],
                     y: WEDDING_HALL_POSITION[1],
@@ -143,7 +148,7 @@ const NaverMap = () => {
               default:
                 window.open(
                   `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
-                  "_blank",
+                  "_blank"
                 )
                 break
             }
@@ -152,9 +157,10 @@ const NaverMap = () => {
           <img src={knaviIcon} alt="kakao-navi-icon" />
           카카오 내비
         </button>
+
+        {/* T맵 */}
         <button
           onClick={() => {
-          
             switch (checkDevice()) {
               case "ios":
               case "android":
