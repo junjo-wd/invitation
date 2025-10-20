@@ -12,14 +12,23 @@ import {
   WEDDING_HALL_POSITION,
 } from "../../const"
 
-// 하드코딩 네이버 지도 API 키
-const NAVER_CLIENT_ID = "tu4l8dvg87"
+// 자꾸 예전 인증키 가지고 와서(캐쉬삭제도 안돼ㅠㅠ 일단 하드코딩 client Id (maps API key) tu4l8dvg87
+const NAVER_CLIENT_ID = "tu4l8dvg87";
 
-export const Map = () => {
-  return <NaverMap clientId={NAVER_CLIENT_ID} />
+ export const Map = () => {
+
+   console.log(process.env.REACT_APP_NAVER_MAP_CLIENT_ID);
+    
+  //return process.env.REACT_APP_NAVER_MAP_CLIENT_ID ? (
+  return NAVER_CLIENT_ID ? (  
+    <NaverMap />
+  ) : (
+    <div>Map is not available</div>
+  )
 }
 
-const NaverMap = ({ clientId }: { clientId: string }) => {
+
+const NaverMap = () => {
   const naver = useNaver()
   const kakao = useKakao()
   const ref = useRef<HTMLDivElement>(null)
@@ -29,22 +38,29 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
 
   const checkDevice = () => {
     const userAgent = window.navigator.userAgent
-    if (userAgent.match(/(iPhone|iPod|iPad)/)) return "ios"
-    if (userAgent.match(/(Android)/)) return "android"
-    return "other"
+    if (userAgent.match(/(iPhone|iPod|iPad)/)) {
+      return "ios"
+    } else if (userAgent.match(/(Android)/)) {
+      return "android"
+    } else {
+      return "other"
+    }
   }
 
   useEffect(() => {
-    if (!naver) return
-    // clientId 하드코딩으로 맵 생성
-    const map = new naver.maps.Map(ref.current, {
-      center: WEDDING_HALL_POSITION,
-      zoom: 17,
-    })
-    new naver.maps.Marker({ position: WEDDING_HALL_POSITION, map })
+    if (naver) {
+      const map = new naver.maps.Map(ref.current, {
+        center: WEDDING_HALL_POSITION,
+        zoom: 17,
+      })
 
-    return () => map.destroy()
-  }, [naver, clientId])
+      new naver.maps.Marker({ position: WEDDING_HALL_POSITION, map })
+
+      return () => {
+        map.destroy()
+      }
+    }
+  }, [naver])
 
   return (
     <>
@@ -57,7 +73,7 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
               clearTimeout(lockMessageTimeout.current)
               lockMessageTimeout.current = setTimeout(
                 () => setShowLockMessage(false),
-                3000
+                3000,
               )
             }}
             onMouseDown={() => {
@@ -65,7 +81,7 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
               clearTimeout(lockMessageTimeout.current)
               lockMessageTimeout.current = setTimeout(
                 () => setShowLockMessage(false),
-                3000
+                3000,
               )
             }}
           >
@@ -90,7 +106,6 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
         </button>
         <div className="map-inner" ref={ref}></div>
       </div>
-
       <div className="navigation">
         <button
           onClick={() => {
@@ -102,17 +117,17 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
               default:
                 window.open(
                   `https://map.naver.com/p/entry/place/${NMAP_PLACE_ID}`,
-                  "_blank"
+                  "_blank",
                 )
+                break
             }
           }}
         >
           <img src={nmapIcon} alt="naver-map-icon" />
           네이버 지도
         </button>
-
         <button
-          onClick={() => {
+          onClick={() => {      
             switch (checkDevice()) {
               case "ios":
               case "android":
@@ -127,17 +142,18 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
               default:
                 window.open(
                   `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
-                  "_blank"
+                  "_blank",
                 )
+                break
             }
           }}
         >
           <img src={knaviIcon} alt="kakao-navi-icon" />
           카카오 내비
         </button>
-
         <button
           onClick={() => {
+          
             switch (checkDevice()) {
               case "ios":
               case "android":
@@ -150,6 +166,7 @@ const NaverMap = ({ clientId }: { clientId: string }) => {
                 break
               default:
                 alert("모바일에서 확인하실 수 있습니다.")
+                break
             }
           }}
         >
