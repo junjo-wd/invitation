@@ -9,6 +9,16 @@ export const Information = () => {
   return (
     <LazyDiv className="card information">
       <h2 className="sub_title">- 안내 -</h2>
+
+      <div className="info-card">
+        <div className="label">화환 안내</div>
+        <div className="content">
+          환경보호 동참을 위해 화환은 정중히 사양합니다.          
+          <br />
+          많은 양해 부탁드립니다.
+        </div>
+      </div>    
+            
       <div className="info-card">
         <div className="label">식사 안내</div>
         <div className="content">
@@ -16,7 +26,7 @@ export const Information = () => {
           <br />
           장소: 2층 연회장
         </div>
-      </div>
+      </div>  
 
       <div className="info-card">
         <div className="label">마음 전하기</div>

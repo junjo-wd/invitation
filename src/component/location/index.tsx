@@ -35,9 +35,14 @@ export const Location = () => {
           <div className="content">
             * 버스 이용 시
             <br />
-            - 수원역 환승센터(1승강장), 평동동남아파트 하차            
+            - 수원역 환승센터(1승강장), 평동동남아파트 하차 
+                       
           </div>
+
+         
         </div>
+
+
         <div className="location-info">
           <div className="transportation-icon-wrapper">
             <CarIcon className="transportation-icon" />

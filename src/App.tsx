@@ -40,7 +40,7 @@ function App() {
           {/* 마음 전하기 */}
           <Information />
           {/* 방명록 */}
-          <GuestBook />
+          {/* <GuestBook /> */}
         </LazyDiv>
 
         <ShareButton />
