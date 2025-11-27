@@ -5,7 +5,7 @@
   "author": "JO HYE JIN",
   "license": "MIT",
   "private": true,
-  "homepage": "https://heehye.kr/invitation",
+  "homepage": "https://junjo-wd.github.io/invitation",
   "dependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
