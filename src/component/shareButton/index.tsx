@@ -6,7 +6,7 @@ import {
   SHARE_ADDRESS_TITLE,
   WEDDING_DATE,
 } from "../../const"
-import ktalkIcon from "../../image/ktalk-icon.png"
+import UrlIcon from "../../image/url_link-icon.png"
 import { LazyDiv } from "../lazyDiv"
 import { useKakao } from "../store"
 
@@ -70,7 +70,22 @@ export const ShareButton = () => {
           })
         }}
       >
-        <img src={ktalkIcon} alt="ktalk-icon" /> 카카오톡으로 공유하기1
+
+      <button
+        className="ktalk-share"
+        onClick={() => {
+          navigator.clipboard.writeText("https://junjo-wd.github.io/invitation/")
+            .then(() => {
+              alert("URL 주소가 복사되었습니다!");
+            })
+            .catch((err) => {
+              console.error("복사 실패:", err);
+            });
+        }}
+      >
+        <img src={UrlIcon} alt="url-icon" /> URL 주소 복사하기
+      </button>
+        {/* <img src={ktalkIcon} alt="ktalk-icon" /> 카카오톡으로 공유하기 */}
       </button>
     </LazyDiv>
   )
