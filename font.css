@@ -1,7 +1,7 @@
 /* MapoGoldenPier */
 @font-face {
   font-family: "MapoGoldenPier";
-  src: url("/invitation/fonts/MapoGoldenPierA.woff") format("woff");
+  src: url("./fonts/MapoGoldenPierA.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 /* Allura */
 @font-face {
   font-family: "Allura";
-  src: url("/invitation/fonts/AlluraRegular.woff") format("woff");
+  src: url("./fonts/AlluraRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 /* GowunBatang */
 @font-face {
   font-family: "GowunBatang-Regular";
-  src: url("/invitation/fonts/GowunBatang-Regular.woff") format("woff");
+  src: url("./fonts/GowunBatang-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 /* SeoulNamsanM */
 @font-face {
   font-family: "SeoulNamsanM";
-  src: url("/invitation/fonts/SeoulNamsanM.woff") format("woff");
+  src: url("./fonts/SeoulNamsanM.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -37,7 +37,7 @@
 /* SeoulNamsanB */
 @font-face {
   font-family: "SeoulNamsanB";
-  src: url("/invitation/fonts/SeoulNamsanB.woff") format("woff");
+  src: url("./fonts/SeoulNamsanB.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 /* BMJUA */
 @font-face {
   font-family: "BMJUA";
-  src: url("/invitation/fonts/BMJUA.woff?v=1") format("woff");
+  src: url("./fonts/BMJUA.woff?v=1") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

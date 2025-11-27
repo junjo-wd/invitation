@@ -17,7 +17,7 @@ export const ShareButton = () => {
             <button
         className="ktalk-share"
         onClick={() => {
-          navigator.clipboard.writeText("https://junjo-wd.github.io/invitation/")
+          navigator.clipboard.writeText("https://invitation.heehye.kr")
             .then(() => {
               alert("URL 주소가 복사되었습니다!");
             })
