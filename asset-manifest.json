@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f0342ad4.css",
-    "main.js": "/static/js/main.2d2e9dc7.js",
+    "main.js": "/static/js/main.98d06fbb.js",
     "static/js/453.40063271.chunk.js": "/static/js/453.40063271.chunk.js",
     "static/media/image3.png": "/static/media/image3.f779b49c39e516061bc3.png",
     "static/media/image10.png": "/static/media/image10.56cd6176064b3cf7ec86.png",
@@ -24,15 +24,13 @@
     "static/media/lock-icon.svg": "/static/media/lock-icon.d97186ec2081e836e536f0b725731dcf.svg",
     "static/media/angle-left-sm.svg": "/static/media/angle-left-sm.658033af14cebbe2d43a80f11c7358ee.svg",
     "static/media/car-icon.svg": "/static/media/car-icon.77d557bb93a6c2d3d6a1ae30764b40c3.svg",
-    "static/media/phone-flip-icon.svg": "/static/media/phone-flip-icon.496ea6d58b4e92a0e352f6f690f60fb7.svg",
     "static/media/bus-icon.svg": "/static/media/bus-icon.5a16a0674d51da7b3aac52196f740cac.svg",
-    "static/media/envelope-icon.svg": "/static/media/envelope-icon.be80a338483de436162aab691e2518d1.svg",
     "main.f0342ad4.css.map": "/static/css/main.f0342ad4.css.map",
-    "main.2d2e9dc7.js.map": "/static/js/main.2d2e9dc7.js.map",
+    "main.98d06fbb.js.map": "/static/js/main.98d06fbb.js.map",
     "453.40063271.chunk.js.map": "/static/js/453.40063271.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0342ad4.css",
-    "static/js/main.2d2e9dc7.js"
+    "static/js/main.98d06fbb.js"
   ]
 }

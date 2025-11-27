@@ -28,6 +28,8 @@ export const Invitation = () => {
       <div className="contHOLIDAYSent">벚꽃이 흩날리는 4월의 어느날,</div>
       <div className="contHOLIDAYSent">저희 결혼합니다.</div> 
       <div className="content"></div>
+      <div className="content"></div>
+
       <div className="content">사랑으로 쌓아온 시간을</div>
       <div className="content">이제 하나의 길로 이어갑니다.</div> 
       <div className="break" />
@@ -37,6 +39,7 @@ export const Invitation = () => {
       <div className="content">늘 곁에서 아껴주신 고마운 분들을</div>
       <div className="content">기쁜 마음으로 초대합니다.</div>
 
+      <div className="break" />
       <div className="break" />
 
       <div className="name">
@@ -56,7 +59,7 @@ export const Invitation = () => {
 
       <div className="break" />
 
-      <Button
+      {/* <Button
         onClick={() => {
           openModal({
             className: "contact-modal",
@@ -134,7 +137,7 @@ export const Invitation = () => {
         }}
       >
         연락하기
-      </Button>
+      </Button> */}
     </LazyDiv>
   )
 }
