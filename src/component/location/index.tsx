@@ -35,13 +35,9 @@ export const Location = () => {
           <div className="content">
             * 버스 이용 시
             <br />
-            - 수원역 환승센터(1승강장), 평동동남아파트 하차 
-                       
+            - 수원역 환승센터(1승강장), 평동동남아파트 하차           
           </div>
-
-         
-        </div>
-
+        </div>     
 
         <div className="location-info">
           <div className="transportation-icon-wrapper">
@@ -54,10 +50,10 @@ export const Location = () => {
             <br />
             <b>메리빌리아 더 프레스티지</b> 검색
             <br />
-            - 웨딩홀 내부 주차 가능 (2시간 무료 주차)
             <br />
-            ※ 만차시 외부주차장 이용 가능 
-            <br />(주차요원 안내 예정)            
+            - 웨딩홀 내부 주차 가능 (2시간 무료 주차)
+            {/* <br /> */}
+            {/* ※ 만차시 외부주차장 이용 가능 (주차요원 안내 예정)             */}
           </div>
           <div />          
         </div>

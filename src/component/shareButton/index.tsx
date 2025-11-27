@@ -8,6 +8,7 @@ import {
 } from "../../const"
 import UrlIcon from "../../image/url_link-icon.png"
 import ktalkIcon from "../../image/ktalk-icon.png"
+import YoutubeIcon from "../../image/youtube-Icon.png"
 import { LazyDiv } from "../lazyDiv"
 import { useKakao } from "../store"
 
@@ -104,3 +105,23 @@ export const ShareButton_url = () => {
   )
 }
 
+export const ShareButton_youtube = () => {
+  return (
+    <LazyDiv className="footer share-button">
+
+      <button
+        className="ktalk-share"
+        onClick={() => {
+          window.open(
+            "https://m.youtube.com/watch?v=PnpmKfZJgOk&pp=0gcJCRUKAYcqIYzv",
+            "_blank", // 새 탭으로 열기
+            "noopener,noreferrer" // 보안 옵션
+          );
+        }}
+      >
+        <img src={YoutubeIcon} alt="youtube-icon" /> 오시는 길 (유튜브)
+      </button>
+
+    </LazyDiv>
+  )
+}
