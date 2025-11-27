@@ -182,10 +182,11 @@ export const useNaver = () => {
   return naver
 }
 
+const kko_id = "e1250c305097c95c1df78f35c4d8a263"
 export const useKakao = () => {
   const { kakao, setKakao } = useContext(GlobalContext)
   useEffect(() => {
-    if (!process.env.REACT_APP_KAKAO_SDK_JS_KEY) {
+    if (!kko_id) {
       return
     }
 
@@ -193,7 +194,7 @@ export const useKakao = () => {
       const script = document.createElement("script")
       script.addEventListener("load", () => {
         if (!(window as any).Kakao.isInitialized()) {
-          ;(window as any).Kakao.init(process.env.REACT_APP_KAKAO_SDK_JS_KEY)
+          ;(window as any).Kakao.init(kko_id)
         }
         setKakao((window as any).Kakao)
       })
