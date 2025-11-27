@@ -8,7 +8,7 @@ import { Gallery } from "./component/gallery"
 import { Information } from "./component/information"
 import { GuestBook } from "./component/guestbook"
 import { LazyDiv } from "./component/lazyDiv"
-import { ShareButton } from "./component/shareButton"
+import { ShareButton, ShareButton_url } from "./component/shareButton"
 
 function App() {
   return (
@@ -44,6 +44,8 @@ function App() {
         </LazyDiv>
 
         <ShareButton />
+
+        <ShareButton_url />
       </div>
     </div>
   )
