@@ -25,9 +25,9 @@
   --white-color: #ffffff;
   --red-color: #ff0000;
 
-  // font-family: "BMJUA";
-  font-family: "SeoulNamsanB";
-  // font-family: "MapoGoldenPier";
+  
+  // font-family: "SeoulNamsanB";
+  font-family: "BMJUA";
   font-size: 20px;
 
   @media (max-width: 500px) {
@@ -81,7 +81,7 @@ $colors: (
 }
 
 button {
-  font-family: "MapoGoldenPier";
+  font-family: "BMJUA";
   font-size: 1rem;
   border: none;
   background-color: transparent;

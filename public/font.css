@@ -7,9 +7,9 @@
   font-display: swap;
 }
 
-/* Allura */
+/* AlluraRegular */
 @font-face {
-  font-family: "Allura";
+  font-family: "AlluraRegular";
   src: url("./fonts/AlluraRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
