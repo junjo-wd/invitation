@@ -37,7 +37,8 @@
 /* SeoulNamsanB */
 @font-face {
   font-family: "SeoulNamsanB";
-  src: url("./fonts/SeoulNamsanB.woff") format("woff");
+  src: url("./fonts/SeoulNamsanB.woff") format("woff"),
+       url("./fonts/SeoulNamsanB.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
