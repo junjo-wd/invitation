@@ -27,14 +27,15 @@ export const Invitation = () => {
 
       <div className="contHOLIDAYSent">벚꽃이 흩날리는 4월의 어느날,</div>
       <div className="contHOLIDAYSent">저희 결혼합니다.</div> 
-      <div className="content"></div>
-      <div className="content"></div>
+      <div className="content"></div>      
 
-      <div className="content">사랑으로 쌓아온 시간을</div>
-      <div className="content">이제 하나의 길로 이어갑니다.</div> 
+      <div className="content">오래전 작은 인연이 우리를 연인으로 만들었고</div>
+      <div className="content">그 인연이 이제 하나가 됩니다.</div> 
       <div className="break" />
-      <div className="content">귀한 걸음 하시어 따뜻한 마음으로</div>
-      <div className="content">함께해 주시면 감사하겠습니다.</div>
+      <div className="content">하나 된 삶을 향해 첫걸음을 내딛는 뜻깊은 날,</div>
+      <div className="content">기꺼이 오셔서 시작하는 모습을 함께해주시면</div>
+      <div className="content">감사하겠습니다.</div>
+
       <div className="break" />
       <div className="content">늘 곁에서 아껴주신 고마운 분들을</div>
       <div className="content">기쁜 마음으로 초대합니다.</div>
