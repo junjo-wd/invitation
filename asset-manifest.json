@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c79a1456.css",
-    "main.js": "/static/js/main.387c54e2.js",
+    "main.js": "/static/js/main.5f928211.js",
     "static/js/453.40063271.chunk.js": "/static/js/453.40063271.chunk.js",
     "static/media/image7.png": "/static/media/image7.bd7ff3c42f0e5c3a8642.png",
     "static/media/image5.png": "/static/media/image5.ad61dc39c3868d1e04fd.png",
@@ -11,7 +11,7 @@
     "static/media/image13.png": "/static/media/image13.46592411dd5c864cf354.png",
     "static/media/image9.png": "/static/media/image9.b4e3d75aa207103278d1.png",
     "static/media/image14.png": "/static/media/image14.75e42c033f2f2a2d52cb.png",
-    "static/media/image11.png": "/static/media/image11.4d083fb7659469bedab8.png",
+    "static/media/image11.png": "/static/media/image11.ba20d4dc588b06ca883c.png",
     "static/media/image10.png": "/static/media/image10.c5ffc385a7359f62541f.png",
     "static/media/image12.png": "/static/media/image12.96fa95168b7cabd2c8ab.png",
     "static/media/cover.png": "/static/media/cover.56aadefccc845311f039.png",
@@ -26,11 +26,11 @@
     "static/media/car-icon.svg": "/static/media/car-icon.77d557bb93a6c2d3d6a1ae30764b40c3.svg",
     "static/media/bus-icon.svg": "/static/media/bus-icon.5a16a0674d51da7b3aac52196f740cac.svg",
     "main.c79a1456.css.map": "/static/css/main.c79a1456.css.map",
-    "main.387c54e2.js.map": "/static/js/main.387c54e2.js.map",
+    "main.5f928211.js.map": "/static/js/main.5f928211.js.map",
     "453.40063271.chunk.js.map": "/static/js/453.40063271.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c79a1456.css",
-    "static/js/main.387c54e2.js"
+    "static/js/main.5f928211.js"
   ]
 }
